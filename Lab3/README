@@ -19,19 +19,3 @@ The workspace cleanly splits responsibilities across two active packages:
     Lab Task 3 – Palindrome Checker String Utility: Programmed automated character cleaning pipelines inside `StringUtil.java` to screen alphanumeric characters and ignore letter case scales.
     Lab Task 4 – Simple Timer Utility: Managed elapsed time calculations within `TimerUtil.java` while checking chronological order bounds.
     Lab Task 5 – Shopping Cart Mini Case Study: Engineered memory-safe, array-backed transaction logic inside `ShoppingCart.java` to fulfill item additions, sequence deletions, missing item handling, and cart resets.
-
-🚀 Instructions to Build and Run
-
-Follow these precise steps to execute the compiled source code and verify the automated testing suites inside your environment:
-
-Prerequisites
-Java Development Kit (JDK): Version 21 or higher
-Apache Maven: Integrated or standalone runner configuration
-
-Running through NetBeans IDE (Graphical Environment)
-1. Launch NetBeans and open the root `CalculatorApp` project folder directory.
-2. Right-click the root folder icon on the left panel tree and click **Clean and Build** (or use shortcut **Shift + F11**). Ensure the console displays a green `BUILD SUCCESS` banner.
-3. To Run Test Suites Independently:
-    * Expand `Test Packages` ➡️ open your package choice (`BankAccount` or `ThirdLabTasks`).
-    * Right-click any test file (e.g., `StringAnalyzerTest.java` or `LabBankAccountTest.java`) and select Test File (or press **Ctrl + F6**).
-4. Inspect execution output logs inside the bottom window tracker to view validation tallies.
