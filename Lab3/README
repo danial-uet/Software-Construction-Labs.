@@ -1,5 +1,5 @@
 🎯 Project Objective
-The core objective of this laboratory repository is to design, implement, and validate foundational software modules using **Java 21**, **Apache Maven**, and **JUnit 5 (Jupiter)**. The workspace applies rigorous test-driven principles to assess operational correctness, handle exceptional state bounds, prevent regression issues, and document critical code execution pathways via readable automated assertions.
+The core objective of this repository is to design, implement, and validate The title of this laboratory assignment is JUnit Unit Testing. The primary objective is to introduce automated unit testing in Java using the JUnit framework within the NetBeans IDE. This workspace is designed to build regular Java classes, write thorough unit tests for distinct class methods, interpret automated test logs, and handle boundary conditions alongside exceptional state errors.
 
 📦 Implemented Packages & Completed Tasks
 
@@ -19,3 +19,13 @@ The workspace cleanly splits responsibilities across two active packages:
     Lab Task 3 – Palindrome Checker String Utility: Programmed automated character cleaning pipelines inside `StringUtil.java` to screen alphanumeric characters and ignore letter case scales.
     Lab Task 4 – Simple Timer Utility: Managed elapsed time calculations within `TimerUtil.java` while checking chronological order bounds.
     Lab Task 5 – Shopping Cart Mini Case Study: Engineered memory-safe, array-backed transaction logic inside `ShoppingCart.java` to fulfill item additions, sequence deletions, missing item handling, and cart resets.
+
+🚀 Instructions to Build and Run
+
+Follow these precise steps to execute the compiled source code and verify the automated testing suites inside Netbeans environment:
+1. Open the NetBeans IDE and import the project folder.
+2. Go to the top menu bar, click Project, and select Clean and Build Project. 
+3. Ensure that the compilation logs output window finishes with a successful status confirmation.
+4. To execute tests, open the Test Packages directory on the left tree menu.
+5. Right-click your selected test suite file (such as StringAnalyzerTest.java or LabBankAccountTest.java) and click Test File.
+6. Review the test results log at the bottom display panel to verify all matching actions.
