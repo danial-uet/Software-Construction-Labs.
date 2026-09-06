@@ -22,6 +22,7 @@ The workspace cleanly splits responsibilities across two active packages:
 🚀 Instructions to Build and Run
 
 Follow these precise steps to execute the compiled source code and verify the automated testing suites inside Netbeans environment:
+
 1. Open the NetBeans IDE and import the project folder.
 2. Go to the top menu bar, click Project, and select Clean and Build Project. 
 3. Ensure that the compilation logs output window finishes with a successful status confirmation.
