@@ -1,6 +1,5 @@
 🎯 Project Objective
-The core objective of this repository is to design, implement, and validate The title of this laboratory assignment is JUnit Unit Testing. The primary objective is to introduce automated unit testing in Java using the JUnit framework within the NetBeans IDE. This workspace is designed to build regular Java classes, write thorough unit tests for distinct class methods, interpret automated test logs, and handle boundary conditions alongside exceptional state errors.
-
+The core objective of this repository is to design, implement, and validate is JUnit Unit Testing. The primary objective is to introduce automated unit testing in Java using the JUnit framework within the NetBeans IDE.
 📦 Implemented Packages & Completed Tasks
 
 🏁 Core System Configuration & Task Layout
