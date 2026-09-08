@@ -1,0 +1,44 @@
+LAB 04: Data Types, Mutability, and Collections
+
+Course: Software Construction (5th Semester Software Engineering)  
+Institution: University of Engineering and Technology, Abbottabad Campus  
+Date: September 9, 2026  
+
+📌 Title & Objective
+This repository contains the implementation of **Lab Task 04: Data Types, Mutability, and Collections**. The main objective of this lab is to explore and apply fundamental concepts of object mutability, collection interface implementations (`List`, `Map`, `Set`), runtime immutability wrappers, safe collection traversal using iterators, and designing custom immutable classes in Java.
+
+🛠️ Tasks Implemented
+
+Lab Tasks
+Lab Task 1: Mutability & Performance (`StringPerformance.java`)
+Implemented `buildString(int n)` using standard string concatenation (`+` operator) to demonstrate $O(n^2)$ time complexity.
+Implemented `buildStringBuilder(int n)` using `StringBuilder.append()` to demonstrate amortized $O(n)$ performance efficiency for $n = 10000$.
+
+Lab Task 2: Safe Collection Modification (`CourseManager.java`)
+Demonstrated how modifying an `ArrayList` during a standard `for-each` loop throws a `ConcurrentModificationException`.
+Resolved the runtime exception using an explicit `Iterator` and `iter.remove()` to safely filter course codes starting with `"6."`, leaving `["8.03", "14.03"]`.
+
+Lab Task 3: Complex Data Types (`TreasureMap.java`)
+Stored key-value treasure coordinates in a `HashMap<String, Double>`.
+Dynamically updated map entries based on current collection size and iterated over `treasures.values()` using a `for-each` loop to compute the total sum.
+
+Lab Task 4: Unmodifiable Wrappers (`Zoo.java`)
+Created a collection wrapper using `Collections.unmodifiableList()`.
+Verified runtime immutability by catching an `UnsupportedOperationException` when attempting to execute `.add("flamingo")`.
+
+Homework Tasks
+Homework 1: Enhanced Map Tracking (`StudentDirectory.java`)
+Implemented a student tracking system mapping IDs to student names.
+Encapsulated map keys by returning an unmodifiable set via `Collections.unmodifiableSet(map.keySet())` and verified that illegal modifications throw an `UnsupportedOperationException`.
+
+Homework 2: Designing Immutable Classes (`Point.java`)
+Created a completely immutable `Point` class using `final` class and field modifiers (`int x`, `int y`) with no setter methods.
+
+🧠 Homework 2 Reflection: Immutability Principles
+
+Why Immutable `Point` is Safer from Bugs and Easier to Understand:
+Making the `Point` class immutable guarantees that its internal state (`x` and `y`) can never be modified after instantiation. 
+
+1. Thread Safety: Immutable instances are naturally thread-safe without requiring synchronized locks, as multiple threads can read state simultaneously without causing race conditions.
+2. Prevention of Side Effects: Passing an immutable `Point` object into external methods guarantees that the calling code's reference remains unaltered, eliminating unexpected side-effects.
+3. Safe Keys for Collections: Because internal coordinate values remain constant, `Point` objects can safely be used as hash keys in collections like `HashMap` or `HashSet` without invalidating hash codes.
