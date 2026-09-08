@@ -5,11 +5,10 @@ Institution: University of Engineering and Technology, Abbottabad Campus
 Date: September 9, 2026  
 
 📌 Title & Objective
-This repository contains the implementation of **Lab Task 04: Data Types, Mutability, and Collections**. The main objective of this lab is to explore and apply fundamental concepts of object mutability, collection interface implementations (`List`, `Map`, `Set`), runtime immutability wrappers, safe collection traversal using iterators, and designing custom immutable classes in Java.
+This repository contains the implementation of "Data Types, Mutability, and Collections". The main objective of this lab is to explore and apply fundamental concepts of object mutability, collection interface implementations (`List`, `Map`, `Set`), runtime immutability wrappers, safe collection traversal using iterators, and designing custom immutable classes in Java.
 
-🛠️ Tasks Implemented
+🛠️ Lab Tasks
 
-Lab Tasks
 Lab Task 1: Mutability & Performance (`StringPerformance.java`)
 Implemented `buildString(int n)` using standard string concatenation (`+` operator) to demonstrate $O(n^2)$ time complexity.
 Implemented `buildStringBuilder(int n)` using `StringBuilder.append()` to demonstrate amortized $O(n)$ performance efficiency for $n = 10000$.
@@ -27,6 +26,7 @@ Created a collection wrapper using `Collections.unmodifiableList()`.
 Verified runtime immutability by catching an `UnsupportedOperationException` when attempting to execute `.add("flamingo")`.
 
 🧠 Homework Tasks
+
 Homework 1: Enhanced Map Tracking (`StudentDirectory.java`)
 Implemented a student tracking system mapping IDs to student names.
 Encapsulated map keys by returning an unmodifiable set via `Collections.unmodifiableSet(map.keySet())` and verified that illegal modifications throw an `UnsupportedOperationException`.
