@@ -33,5 +33,4 @@ Encapsulated map keys by returning an unmodifiable set via `Collections.unmodifi
 
 Homework 2: Designing Immutable Classes (`Point.java`)
 Created a completely immutable `Point` class using `final` class and field modifiers (`int x`, `int y`) with no setter methods.
-
 Making the `Point` class immutable guarantees that its internal state (`x` and `y`) can never be modified after instantiation. 
