@@ -38,7 +38,3 @@ Created a completely immutable `Point` class using `final` class and field modif
 
 Why Immutable `Point` is Safer from Bugs and Easier to Understand:
 Making the `Point` class immutable guarantees that its internal state (`x` and `y`) can never be modified after instantiation. 
-
-1. Thread Safety: Immutable instances are naturally thread-safe without requiring synchronized locks, as multiple threads can read state simultaneously without causing race conditions.
-2. Prevention of Side Effects: Passing an immutable `Point` object into external methods guarantees that the calling code's reference remains unaltered, eliminating unexpected side-effects.
-3. Safe Keys for Collections: Because internal coordinate values remain constant, `Point` objects can safely be used as hash keys in collections like `HashMap` or `HashSet` without invalidating hash codes.
