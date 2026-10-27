@@ -1,0 +1,18 @@
+UET Abbottabad - Software Construction (Lab Task 07)
+
+Course: Software Construction (5th Semester Software Engineering)[cite: 1]    
+Institution: University of Engineering and Technology, Abbottabad Campus[cite: 1]  
+
+Repository Structure & Submission Format
+Main File: `com.university.lab.lab7.Lab7.java` serves as the main entry point executing all lab tasks.
+Packages:
+Task1: Black-Box Reuse via Composition and Interfaces (`PaymentMethod`, `CreditCardPayment`, `JazzCashPayment`, `EcommerceCart`)
+Task2: Generic Type Safety containers (`DataBox<T>`)
+Task3: Liskov Substitution Principle and Contract Integrity (`Rectangle`, `Square`, `Shape`, `FixedSquare`)
+Task4: Reusable Ordering Algorithms (`Student` with `Comparable`, `CgpaComparator`)
+
+How to Run the Code
+
+1. Clone the repository:
+   ```bash
+   git clone [https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git](https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git)
