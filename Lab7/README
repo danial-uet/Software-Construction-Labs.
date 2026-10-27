@@ -3,48 +3,39 @@ UET Abbottabad - Software Construction (Lab Task 07)
 Course: Software Construction (5th Semester Software Engineering)[cite: 1]    
 Institution: University of Engineering and Technology, Abbottabad Campus[cite: 1]  
 
-Software Construction Labs
-Lab 01 Overview
+Lab # 07: Construction for Reuse: Interfaces, Generics, and Contracts
 
-This repository contains the source code, task implementations, and documentation for Software Construction Labs. The project is structured with a modular package architecture to maintain clean separation of concerns across different assignment tasks.
+📌 Lab Objective
+Apply enterprise software engineering principles by designing components capable of seamless black-box reuse, generic type safety, and contract integrity.
 
-Project Structure
+📂 Project Structure & Package Details
 
-The project follows a standard package hierarchy located under the com.university.lab namespace:
-
-Task 1: Implements foundational logic and initial problem requirements.
-
-Task 2: Focuses on core component design and structured execution.
-
-Task 3: Handles intermediate data processing and algorithmic workflows.
-
-Task 4: Implements advanced features and system integration.
-
-Main Entry Point
-
-The primary execution point for the entire lab suite is centralized in the runner class:
-
-Class: com.university.lab.lab7.Lab7
-
-Functionality: Coordinates execution flows across all configured task packages.
-
-Task Descriptions
-
-Task 1
-This task establishes the basic project configuration and implements the primary initialization routines. It ensures proper data structures and standard input handling are correctly set up.
-
-Task 2
-This task introduces object-oriented modularity, focusing on encapsulation and class interactions. It validates core operational logic through structured unit functions.
-
-Task 3
-This component implements data filtering, transformation algorithms, and logic handling. It emphasizes clean code principles and efficient execution pathways.
-
-Task 4
-This final task integrates the previous modules into a cohesive architecture, demonstrating advanced software construction practices and robust error management.
-
-Conclusion
-
-This lab successfully demonstrates structured Java application development, proper package management, and clean version control workflows using GitHub. All tasks have been verified for modularity, correctness, and clean execution.
+```text
+SC, Assignment # 01/
+│
+├── src/
+│   ├── main/
+│   │   └── java/
+│   │       ├── task1/  # Task 1: Black-Box Reuse (Composition via Interfaces)
+│   │       │   ├── PaymentMethod.java
+│   │       │   ├── CreditCardPayment.java
+│   │       │   ├── JazzCashPayment.java
+│   │       │   └── EcommerceCart.java
+│   │       │
+│   │       ├── task2/  # Task 2: Generic Type Safety
+│   │       │   └── DataBox.java
+│   │       │
+│   │       ├── task3/  # Task 3: Liskov Substitution Principle (Contract Integrity)
+│   │       │   ├── Shape.java
+│   │       │   ├── Rectangle.java
+│   │       │   ├── Square.java
+│   │       │   └── FixedSquare.java
+│   │       │
+│   │       └── task4/  # Task 4: Reusable Ordering Algorithms
+│   │           ├── Student.java
+│   │           └── CgpaComparator.java
+│   └── test/
+└── pom.xml
 
 Repository Structure & Submission Format
 Main File: `com.university.lab.lab7.Lab7.java` serves as the main entry point executing all lab tasks.
