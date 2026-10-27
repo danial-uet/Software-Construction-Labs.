@@ -6,7 +6,8 @@ Institution: University of Engineering and Technology, Abbottabad Campus[cite: 1
 Lab # 07: Construction for Reuse: Interfaces, Generics, and Contracts
 
 📌 Lab Objective
-Apply enterprise software engineering principles by designing components capable of seamless black-box reuse, generic type safety, and contract integrity.
+Apply enterprise software engineering principles by designing components capable of seamless black-box reuse, generic type safety, 
+and contract integrity.
 
 📂 Project Structure & Package Details
 
@@ -49,4 +50,4 @@ How to Run the Code
 
 1. Clone the repository:
    ```bash
-   git clone [https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git](https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git)
+   git clone [https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git]
