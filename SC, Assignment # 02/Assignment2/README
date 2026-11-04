@@ -1,0 +1,92 @@
+SC&D Assignment #02: Refactoring Order Billing Engine
+
+Overview
+
+This repository contains the complete refactoring solution for Assignment 2 in Software Construction & Design (SC&D). The objective of this project is to safely renovate a legacy, monolithic OrderBillingEngine system by implementing an automated JUnit 5 testing safety net, performing a thorough Code Smell and SOLID audit, and applying modern design patterns to achieve a clean, modular architecture.
+
+Project Structure & Implementation Details
+
+src/
+└── assignment2/
+    ├── task1/
+    │   ├── OrderBillingEngine.java
+    │   └── OrderBillingEngineTest.java
+    └── task2/
+        ├── Task2Runner.java
+        ├── domain/
+        │   ├── Order.java
+        │   └── Product.java
+        ├── calculator/
+        │   ├── TaxCalculator.java
+        │   └── DiscountCalculator.java
+        ├── payment/
+        │   ├── PaymentStrategy.java
+        │   ├── CreditCardPayment.java
+        │   ├── PaypalPayment.java
+        │   └── BitcoinPayment.java
+        ├── notification/
+        │   ├── NotificationDispatcher.java
+        │   ├── EmailNotificationDispatcher.java
+        │   └── SmsNotificationDispatcher.java
+        └── repository/
+            ├── OrderRepository.java
+            └── FileOrderRepository.java
+
+
+Task 1: Legacy Code Safety Net (JUnit 5 Testing)
+
+Location: assignment2.task1
+
+Contents: 01 Java Class (OrderBillingEngine.java) and 01 JUnit 5 Test Suite (OrderBillingEngineTest.java).
+
+Details: Before refactoring, a comprehensive characterization test suite was constructed to cover all legacy edge cases. The test suite verifies discounts, tax calculations, payment methods, invalid inputs, and error paths, achieving a 100% pass rate with 0 failures to ensure zero regression during refactoring.
+
+Task 2 & 3: Code Smell Audit & Clean Architecture Redesign
+
+Location: assignment2.task2
+
+Contents: 14 Java Classes designed to modularize the legacy monolithic engine.
+
+Architecture Breakdown:
+
+Domain Layer: Order and Product model classes representing core business data.
+
+Calculators: Decoupled TaxCalculator and DiscountCalculator handling specific monetary computations.
+
+Payment Strategy Pattern: PaymentStrategy interface implemented by CreditCardPayment, PaypalPayment, and BitcoinPayment to eliminate nested if-else conditionals.
+
+Notification Dispatchers: NotificationDispatcher interface implemented by EmailNotificationDispatcher and SmsNotificationDispatcher for decoupled communications.
+
+Repository Pattern: OrderRepository interface and FileOrderRepository implementation to isolate persistence mechanisms.
+
+Execution: Task2Runner.java serves as the driver class executing the clean, refactored workflow.
+
+Task 4: Step-by-Step Git Commit Trail
+
+Details: The refactoring process was conducted through disciplined, incremental commits rather than bulk uploads. The Git log contains 10 logical commits tracking the step-by-step progress from baseline setup to final architecture verification.
+
+Technical Constraints & Compatibility
+
+Java Collection Handling: Strict implementation of raw-type collection structures to guarantee seamless cross-environment compilation and IDE rendering.
+
+Testing Framework: JUnit 5 (Jupiter engine).
+
+Design Principles Applied: Single Responsibility Principle (SRP), Open/Closed Principle (OCP), Dependency Inversion Principle (DIP), Strategy Pattern, and Repository Pattern.
+
+How to Run the Project
+
+Clone the Repository:
+
+git clone <YOUR_REPOSITORY_LINK>
+cd <REPOSITORY_FOLDER>
+
+
+Execute Unit Tests (Task 1):
+Run OrderBillingEngineTest.java within your IDE or standard build tool to confirm the 100% test pass rate.
+
+Run Refactored Architecture (Task 2/3):
+Execute Task2Runner.java to verify the execution of the refactored billing engine.
+
+Verify Commit Trail (Task 4):
+
+git log --oneline
