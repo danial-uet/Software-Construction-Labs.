@@ -1,75 +1,63 @@
-# Lab 08: Object-Oriented Programming (OOP) in Java
-**Course:** SE-206L Software Construction & Development  
-**Student Name:** Muhammad Danial  
-**Registration Number:** 24ABSWE0021  
-**Semester:** 5th Semester, Software Engineering  
-**Department:** UET Peshawar, Abbottabad Campus  
+Lab 08: Object-Oriented Programming (OOP) in Java
+Course: SE-206L Software Construction & Development  
+Student Name: Muhammad Danial  
+Registration Number: 24ABSWE0021  
+Semester: 5th Semester, Software Engineering  
+Department: UET Peshawar, Abbottabad Campus  
 
----
-
-## 📌 Lab Overview
+📌 Lab Overview
 The core domain module of an Enterprise Fleet Management System (**Fleetops**) was engineered during this lab. The system models transport vehicles, their internal components, operating drivers, and organizational depots while strictly enforcing object-oriented whole-part relationships, encapsulation boundaries, and memory safety rules in Java.
 
----
-
-## 🎯 Lab Objectives
+🎯 Lab Objectives
 1. Translate conceptual Whole-Part relationships into concrete, production-grade Java code without architectural violations.
 2. Differentiate at the memory and reference level between **Aggregation** (independent lifecycle, reference sharing) and **Composition** (coincident lifecycle, strong ownership).
 3. Identify and prevent **Representation Exposure** (aliasing vulnerabilities) in Composition using defensive copying.
 4. Construct a verification test driver that programmatically demonstrates lifecycle isolation and reference integrity.
 5. Commit and track the completed Software Configuration Item (SCI) using Git and GitHub.
 
----
-
-## 📁 Project Package & Structure
+📁 Project Package & Structure
 * **Group Id:** `com.uet.construction`
 * **Package:** `com.uet.construction.fleetops`
 * **Project Name:** `Lab04_ObjectRelationships_Student`
 
-### Implemented Classes:
-1. **`Driver.java`**: Encapsulates driver profile details with robust input validation.
-2. **`Engine.java`**: Models vehicle engines with copy constructors for defensive cloning.
-3. **`MaintenanceLog.java`**: Tracks service history entries with defensive duplication support.
-4. **`Vehicle.java`**: Enforces strict composition rules, internal component initialization, and defensive accessors.
-5. **`FleetDepot.java`**: Implements aggregation contracts for housing, assigning, and releasing vehicles safely.
-6. **`FleetVerificationDriver.java`**: Executable main driver class validating test assertions for lifecycle independence and encapsulation.
+Implemented Classes:
+1. `Driver.java`: Encapsulates driver profile details with robust input validation.
+2. `Engine.java`: Models vehicle engines with copy constructors for defensive cloning.
+3. `MaintenanceLog.java`: Tracks service history entries with defensive duplication support.
+4. `Vehicle.java`: Enforces strict composition rules, internal component initialization, and defensive accessors.
+5. `FleetDepot.java`: Implements aggregation contracts for housing, assigning, and releasing vehicles safely.
+6. `FleetVerificationDriver.java`: Executable main driver class validating test assertions for lifecycle independence and encapsulation.
 
----
+🛠️ Task Descriptions & Implementation Details
 
-## 🛠️ Task Descriptions & Implementation Details
+Task 1: Environment & Project Scaffolding
+1. Initialized a Java with Maven Application in Apache NetBeans.
+2. Configured the package hierarchy under `com.uet.construction.fleetops`.
+3. Set up proper `.gitignore` rules to exclude build targets (`target/`) and NetBeans project caches (`.nb-cache/`).
 
-### Task 1: Environment & Project Scaffolding
-* Initialized a Java with Maven Application in Apache NetBeans.
-* Configured the package hierarchy under `com.uet.construction.fleetops`.
-* Set up proper `.gitignore` rules to exclude build targets (`target/`) and NetBeans project caches (`.nb-cache/`).
+Task 2: Implementing Aggregation (Driver and Depot Management)
+`Driver` Class: Manages private attributes (`driverId`, `fullName`, `licenseNumber`) with null/blank input validation.
+`FleetDepot` Class: Implements aggregation through:
+  1. `assignVehicle(Vehicle vehicle)`: Links pre-existing external vehicles.
+  2.  `releaseVehicle(Vehicle vehicle)`: Unlinks vehicles without destroying the vehicle objects themselves.
+  3.  `getAssignedVehicles()`: Returns an unmodifiable view using `Collections.unmodifiableList` to secure internal collections.
 
-### Task 2: Implementing Aggregation (Driver and Depot Management)
-* **`Driver` Class:** Manages private attributes (`driverId`, `fullName`, `licenseNumber`) with null/blank input validation.
-* **`FleetDepot` Class:** Implements aggregation through:
-  * `assignVehicle(Vehicle vehicle)`: Links pre-existing external vehicles.
-  * `releaseVehicle(Vehicle vehicle)`: Unlinks vehicles without destroying the vehicle objects themselves.
-  * `getAssignedVehicles()`: Returns an unmodifiable view using `Collections.unmodifiableList` to secure internal collections.
+Task 3: Implementing Composition & Preventing Representation Exposure
+1. Restricted Instantiation: `Vehicle` constructs its internal `Engine` directly using raw parameters rather than accepting an external engine reference.
+2. Defensive Copying: Implemented copy constructors in `Engine` (`public Engine(Engine other)`) and `MaintenanceLog` (`public MaintenanceLog(MaintenanceLog other)`).
+3. Defensive Accessors: `getEngine()` returns a deep defensive copy, and `getMaintenanceHistory()` returns unmodifiable lists of deep clones to block aliasing vulnerabilities.
 
-### Task 3: Implementing Composition & Preventing Representation Exposure
-* **Restricted Instantiation:** `Vehicle` constructs its internal `Engine` directly using raw parameters rather than accepting an external engine reference.
-* **Defensive Copying:** Implemented copy constructors in `Engine` (`public Engine(Engine other)`) and `MaintenanceLog` (`public MaintenanceLog(MaintenanceLog other)`).
-* **Defensive Accessors:** `getEngine()` returns a deep defensive copy, and `getMaintenanceHistory()` returns unmodifiable lists of deep clones to block aliasing vulnerabilities.
+Task 4: Verification Driver & Architectural Testing
+1. Test Case A (Aggregation Lifecycle Independence):** Proves that destroying/nullifying a `FleetDepot` leaves assigned `Vehicle` and `Driver` instances fully intact and accessible in heap memory.
+2. Test Case B (Composition Lifetime Binding & Encapsulation):** Verifies that mutating a leaked engine reference fails to alter the vehicle's internal engine state, and attempting to clear the maintenance history list throws an expected `UnsupportedOperationException`.
 
-### Task 4: Verification Driver & Architectural Testing
-* **Test Case A (Aggregation Lifecycle Independence):** Proves that destroying/nullifying a `FleetDepot` leaves assigned `Vehicle` and `Driver` instances fully intact and accessible in heap memory.
-* **Test Case B (Composition Lifetime Binding & Encapsulation):** Verifies that mutating a leaked engine reference fails to alter the vehicle's internal engine state, and attempting to clear the maintenance history list throws an expected `UnsupportedOperationException`.
-
----
-
-## 🚀 How to Run the Code
+🚀 How to Run the Code
 1. Open **Apache NetBeans**.
 2. Clone or open the project folder `Lab04_ObjectRelationships_Student`.
 3. Navigate to **Source Packages** -> `com.uet.construction.fleetops`.
 4. Right-click on **`FleetVerificationDriver.java`** and select **Run File** (`Shift + F6`).
 
----
-
-## 📊 Verification Console Output
+ 📊 Verification Console Output
 ```text
 === Test Case A: Aggregation Lifecycle Independence ===
 Before depot destruction: Depot vehicles count = 2
@@ -87,4 +75,6 @@ Initial Maintenance History count: 2
 Caught expected UnsupportedOperationException when mutating history list.
 Vehicle internal maintenance history count after mutation attempt: 2
 
+==================================================
 BUILD SUCCESS
+==================================================
