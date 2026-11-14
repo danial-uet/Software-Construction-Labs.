@@ -76,11 +76,8 @@ Clone the repository:
 Bash
 git clone <your-repository-url>
 Open the Lab9 project in NetBeans.
-
 Expand Source Packages and locate Task1, Task2, or Task3.
-
 Right-click Main.java inside the target task package and select Run File (Shift + F6).
-
 Note: Running Task2.Main intentionally triggers an IllegalArgumentException stack trace as part of the fail-fast demonstration.
 
 Running Task 4 (JUnit 5 Tests)
