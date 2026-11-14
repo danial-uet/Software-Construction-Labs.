@@ -1,16 +1,12 @@
-# Software Construction & Maintenance – Lab 09
+Software Construction & Maintenance – Lab 09
 
-**Course:** Software Construction (5th Semester Software Engineering)  
-**Institution:** University of Engineering and Technology, Abbottabad Campus  
-**Instructor:** Engr. Rizwan Shah  
+Course: Software Construction (5th Semester Software Engineering)  
+Institution: University of Engineering and Technology, Abbottabad Campus  
+Instructor: Engr. Rizwan Shah  
 
----
-
-## Overview
+Overview
 
 This repository contains the complete implementation for **Lab 09**, focusing on core software maintenance principles: identifying and removing code smells, enforcing defensive domain boundaries, implementing diagnostic log observability, and building isolated automated unit tests using JUnit 5.
-
----
 
 ## Project Directory Structure
 
