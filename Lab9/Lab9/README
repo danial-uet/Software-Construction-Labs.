@@ -5,11 +5,9 @@ Institution: University of Engineering and Technology, Abbottabad Campus
 Instructor: Engr. Rizwan Shah  
 
 Overview
-
 This repository contains the complete implementation for Lab 09, focusing on core software maintenance principles: identifying and removing code smells, enforcing defensive domain boundaries, implementing diagnostic log observability, and building isolated automated unit tests using JUnit 5.
 
 Project Directory Structure
-
 Lab9/
 ├── src/
 │   ├── main/java/
